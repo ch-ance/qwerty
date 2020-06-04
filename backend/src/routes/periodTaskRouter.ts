@@ -41,6 +41,9 @@ router.post("/create", async (req, res) => {
 
   try {
     const newTask: PeriodicTask = await PeriodicTasks.add(taskToCreate, email);
+    if (!newTask) {
+      res.status(403).json({ error: "Error creating task"})
+    }
     res
       .status(201)
       .json({ newTask, message: "API says hello! Task successfully created!" });
