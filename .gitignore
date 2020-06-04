@@ -6,3 +6,7 @@
 /tmp
 /yarn.lock
 node_modules
+*/.env
+cli/.*
+cli/db.json
+cli/key.txt
