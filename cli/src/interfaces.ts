@@ -4,7 +4,7 @@ export interface Todo {
   list: string;
 }
 
-enum PeriodUnit {
+export enum PeriodUnit {
   seconds,
   minutes,
   hours,
@@ -12,8 +12,8 @@ enum PeriodUnit {
 }
 
 export interface PeriodicTask {
-  created_at: string;
-  updated_at: string;
+  created_at?: string;
+  updated_at?: string;
   task_name: string;
   period_unit: PeriodUnit;
   period_frequency: number;

@@ -38,6 +38,7 @@ USAGE
 * [`asdf help [COMMAND]`](#asdf-help-command)
 * [`asdf login [FILE]`](#asdf-login-file)
 * [`asdf register [FILE]`](#asdf-register-file)
+* [`asdf tetris [FILE]`](#asdf-tetris-file)
 * [`asdf todo [FILE]`](#asdf-todo-file)
 * [`asdf todo:new [FILE]`](#asdf-todonew-file)
 * [`asdf todo:show [FILE]`](#asdf-todoshow-file)
@@ -75,8 +76,9 @@ USAGE
 
 OPTIONS
   -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help                 show CLI help
+  -i, --frequency=frequency
+  -n, --name=name
 ```
 
 _See code: [src/commands/createPeriodicTask.ts](https://github.com/cembreyfarquhar/asdf/blob/v0.0.0/src/commands/createPeriodicTask.ts)_
@@ -213,6 +215,22 @@ OPTIONS
 ```
 
 _See code: [src/commands/register.ts](https://github.com/cembreyfarquhar/asdf/blob/v0.0.0/src/commands/register.ts)_
+
+## `asdf tetris [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ asdf tetris [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/tetris.ts](https://github.com/cembreyfarquhar/asdf/blob/v0.0.0/src/commands/tetris.ts)_
 
 ## `asdf todo [FILE]`
 

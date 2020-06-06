@@ -35,8 +35,9 @@ export default class Login extends Command {
     Axios.post(`${process.env.API_URL}/api/users/login`, { user })
       .then(res => {
         const token = res.data.token;
-
+        const name = res.data.name;
         saveState({ token });
+        saveState({ name });
       })
       .catch(console.error);
 

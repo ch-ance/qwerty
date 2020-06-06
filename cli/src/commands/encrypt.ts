@@ -19,7 +19,6 @@ export default class Encrypt extends Command {
 
     if (!flags.text) {
       this.log("No text given");
-      // this.log(key.toString())
       return;
     }
 
