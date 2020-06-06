@@ -27,11 +27,12 @@ const secret = process.env.JWT_SECRET || "secret";
 const router = express.Router();
 // Register Endpoint
 router.post("/register", (req, res) => {
-    const { email, password, first_name } = req.body.user;
+    const { email, password } = req.body.user;
+    const createdAt = new Date().toISOString().slice(0, 19).replace('T', ' ');
     const newUser = Users.add({
         email,
         password: bcrypt.hashSync(password),
-        first_name
+        createdAt
     });
     if (newUser) {
         res.status(201).json(newUser);

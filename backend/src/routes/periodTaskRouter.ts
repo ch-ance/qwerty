@@ -16,7 +16,6 @@ router.post("/create", async (req, res) => {
   // get user email from body for now
   const { email } = req.body.user;
 
-
   // check for optional fields
   // tslint:disable-next-line: variable-name
   const task_description = req.body.newTask.task_description
@@ -40,13 +39,16 @@ router.post("/create", async (req, res) => {
   };
 
   try {
-    const newTask: PeriodicTask = await PeriodicTasks.add(taskToCreate, email);
-    if (!newTask) {
-      res.status(403).json({ error: "Error creating task"})
-    }
-    res
-      .status(201)
-      .json({ newTask, message: "API says hello! Task successfully created!" });
+    PeriodicTasks.add(taskToCreate, email)
+      .then(newTask => {
+        res.status(201).json({
+          newTask,
+          message: "API says hello! Task successfully created!"
+        });
+      })
+      .catch(() => {
+        res.status(403).json({ error: "Error creating task" });
+      });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Unable to create task" });

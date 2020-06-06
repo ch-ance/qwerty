@@ -7,7 +7,7 @@ const aes_js_1 = __importDefault(require("aes-js"));
 // example 128 bit key
 // const key128 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 // const key = new Uint8Array(key128);
-const key = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 256];
+const key = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 255];
 console.log(key);
 // Convert text to bytes
 const text = "hello!!!";
@@ -24,5 +24,4 @@ const aesCtr2 = new aes_js_1.default.ModeOfOperation.ctr(key, new aes_js_1.defau
 const decryptedBytes = aesCtr2.decrypt(hexToBytes);
 // convert decrypted bytes to text
 const decryptedText = aes_js_1.default.utils.utf8.fromBytes(decryptedBytes);
-module.exports = [encryptedHex, decryptedText];
 //# sourceMappingURL=dev-experimenting.js.map
