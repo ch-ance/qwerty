@@ -1,6 +1,6 @@
-# asdf
+# qwerty
 a strange productivity tool, right in the terminal
-> the name `asdf` comes from the simple fact that it is an easy sequence of letters to type and remember, and as such is the entry point for any commands 
+> the name `qwerty` comes from the simple fact that it is an easy sequence of letters to type and remember, and as such is the entry point for any commands 
 
 ## Origin Story 
 As a developer, my terminal is always open. I wanted a centralized application to perform various tasks, and a CLI felt like a natural fit. This project is still in its genesis and most features are incomplete.
