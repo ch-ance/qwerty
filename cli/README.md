@@ -38,10 +38,11 @@ USAGE
 * [`asdf help [COMMAND]`](#asdf-help-command)
 * [`asdf login [FILE]`](#asdf-login-file)
 * [`asdf register [FILE]`](#asdf-register-file)
-* [`asdf tetris [FILE]`](#asdf-tetris-file)
+* [`asdf tetris`](#asdf-tetris)
 * [`asdf todo [FILE]`](#asdf-todo-file)
 * [`asdf todo:new [FILE]`](#asdf-todonew-file)
 * [`asdf todo:show [FILE]`](#asdf-todoshow-file)
+* [`asdf viewPeriodicTasks [FILE]`](#asdf-viewperiodictasks-file)
 
 ## `asdf autocomplete [SHELL]`
 
@@ -216,18 +217,16 @@ OPTIONS
 
 _See code: [src/commands/register.ts](https://github.com/cembreyfarquhar/asdf/blob/v0.0.0/src/commands/register.ts)_
 
-## `asdf tetris [FILE]`
+## `asdf tetris`
 
-describe the command here
+start a game of tetris
 
 ```
 USAGE
-  $ asdf tetris [FILE]
+  $ asdf tetris
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help  show CLI help
 ```
 
 _See code: [src/commands/tetris.ts](https://github.com/cembreyfarquhar/asdf/blob/v0.0.0/src/commands/tetris.ts)_
@@ -278,4 +277,20 @@ OPTIONS
 ```
 
 _See code: [src/commands/todo/show.ts](https://github.com/cembreyfarquhar/asdf/blob/v0.0.0/src/commands/todo/show.ts)_
+
+## `asdf viewPeriodicTasks [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ asdf viewPeriodicTasks [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/viewPeriodicTasks.ts](https://github.com/cembreyfarquhar/asdf/blob/v0.0.0/src/commands/viewPeriodicTasks.ts)_
 <!-- commandsstop -->

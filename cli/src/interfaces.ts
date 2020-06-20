@@ -19,6 +19,7 @@ export interface PeriodicTask {
   period_frequency: number;
   task_description?: string;
   notes?: string;
+  completed?: boolean;
 }
 
 // CURRENTLY UNUSED - may be used later but probably modified

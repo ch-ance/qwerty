@@ -24,6 +24,26 @@ export default class CreatePeriodicTask extends Command {
       tasks = await Axios.get(
         `${process.env.API_URL}/api/periodic_tasks/get/${email}`
       );
+      if (!Array.isArray(tasks)) {
+        console.error("Error retrieving tasks");
+      }
+
+      tasks.forEach((task: PeriodicTask, i) => {
+        const {
+          task_name,
+          completed,
+          updated_at,
+          period_frequency,
+          period_unit
+        } = task;
+
+        this.log(
+          `${i + 1}. ${task_name} -- ${
+            completed ? "Completed at " + updated_at : "Not complete"
+          }`
+        );
+        this.log(`Occurs every ${period_unit} ${period_frequency}`);
+      });
     } catch (error) {
       console.error(error);
     }
