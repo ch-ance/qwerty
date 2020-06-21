@@ -23,3 +23,12 @@ export interface PeriodicTask {
   completed?: boolean;
   last_completed_at?: string;
 }
+
+export interface Reminder {
+  id: number;
+  created_at: string;
+  updated_at?: string;
+  task: string;
+  remind_at: string;
+  completed: boolean;
+}
