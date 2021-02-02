@@ -22,3 +22,10 @@ These features may seem sporadic and unrelated, but I started making this for my
 
 If you have any ideas or feature requests, please contact me or submit a Github ticket! Eventually this will be 'production-ready' and intended to be used by anyone who regularly has an open terminal window.
 
+
+
+### New Ruby Version
+Undertaking a new version of this application using Ruby and the Thor framework. https://github.com/erikhuda/thor/wiki
+
+Goals:
+- Send messages to a chat room
